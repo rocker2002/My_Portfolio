@@ -34,18 +34,24 @@ Future<void> _launchUrl(String url) async{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Row(
         children: [
+          SizedBox(width: 20,),
           Expanded(
+            child: Container(
+              height: MediaQuery.sizeOf(context).height*0.89,
+              color: Colors.black,
             child: Drawer(
-              shape: LinearBorder(),
+              backgroundColor: Colors.black,
         child: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [Color(0xFFfdbb2d), Color(0xFFb21f1f), Color(0xFF1a2a6c)]
-            )
+            ),
+            borderRadius: BorderRadius.circular(16)
           ),
           child: Column(
           children: [
@@ -122,6 +128,7 @@ Future<void> _launchUrl(String url) async{
         )
        )
       ),
+            )
           ),
           Expanded(
             flex: 3,
